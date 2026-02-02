@@ -44,7 +44,7 @@
 
   .player-wrap {
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
   }
 
   .player-wrap video {
@@ -167,7 +167,7 @@
 </div>
 
 <script>
-/* POPUP LOGIC */
+/* POPUP */
 const popup = document.getElementById("popup");
 function closePopup() {
   popup.style.display = "none";
@@ -185,17 +185,16 @@ async function initPlayer() {
   player.configure({
     drm: {
       clearKeys: {
-        "a93c1cbfdccd23233bac13540c693e7f":
-        "2f6ab2e6693eb847eff3c9da8f9d01fc"
+        "192b1115da041585c77200128549efa1":
+        "634e10efe4abbb14be400a3ccbac0258"
       }
     }
   });
 
   try {
     await player.load(
-      "https://otte.live.fly.ww.aiv-cdn.net/bom-nitro/live/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd"
+      "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/i2pcjr4pe5/out/v1/912e9db56d75403b8a9ac0a719110f36/cenc.mpd"
     );
-    console.log("Stream loaded successfully");
   } catch (e) {
     console.error("Stream load failed", e);
   }
@@ -206,3 +205,4 @@ document.addEventListener("DOMContentLoaded", initPlayer);
 
 </body>
 </html>
+
